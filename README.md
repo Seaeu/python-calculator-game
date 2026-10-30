@@ -11,4 +11,4 @@ First you pick a difficulty
 python main.py
 
 ## What I learned
-Used a list to map strings to variables, use of while loop
+Used a list to map strings to variables, use of a Class to get a variety of variables from 1 identifier.
