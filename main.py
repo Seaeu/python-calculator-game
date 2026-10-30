@@ -1,8 +1,6 @@
-import math as m
 import time
 import random as r
 import curses as c
-import sys
 ## Other Files ##
 import variables as var
 
@@ -168,7 +166,7 @@ def Try_Again(stdscr):
             else:
                 stdscr.addstr(f"   {option}   ")
         stdscr.refresh()
-        key = stdscr.getch() #Detects key presses
+        key = stdscr.getch()
 
         # Handle Navigation Array Mapping Logic
         if key == c.KEY_LEFT:
@@ -177,14 +175,6 @@ def Try_Again(stdscr):
             current_selection = (current_selection + 1) % len(options) # Move index right, wrap around to start if out-of-bounds upper
         elif key in [10, 13, c.KEY_ENTER]:
             return options[current_selection] # Break input monitoring state if Enter key is verified
-
-def shop(stdscr,difficulty):
-    pass
-
-
-
-
-
 
 def DIFF_determine(): # Retreives DIFF from query responses
     difficulty = c.wrapper(DIFF_query)
@@ -207,7 +197,7 @@ def DIFF_determine(): # Retreives DIFF from query responses
         return diff
 
 def main(Loss=False):
-    balance = 0
+    balance = 0 # Not
     diff = DIFF_determine()
     while Loss == False:
         result = question(diff.mult,diff.bound,diff.tries,diff.lives)
@@ -221,8 +211,7 @@ def main(Loss=False):
             else:
                 print("")
         else:
-            balance = balance + diff.reward
-            print(f"Congrats! Money earned: ${diff.reward} Total: ${balance}")
+            print("Congrats!")
 
 
 
