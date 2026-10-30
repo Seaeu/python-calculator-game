@@ -1,2 +1,2 @@
-# python calculator game
-A calculator game made in Python.
+# Python Calculator Game
+A calculator game made in python.
